@@ -83,41 +83,7 @@ async def upload_file_route(file: UploadFile):
 
 
 # R E A D   E X C E L
-@app.post("/excel-upload",tags=["Загрузите файл Excel и отправьте данные в БД - BATCH"])
-async def upload_excel_route(file: UploadFile):
-    """## Используя этот метод вы загрузите данные в базу данных \n
-    #### Формат файла: xlsb  и xls\n
-    #### Формат таблиц: dt - article - kg \n
-    *
-    Метод загрузки данных создан под формат файла выданного сотрудником службы подбора персонала\n
-    Данные другого формата не актуальны для таблицы в существующей базе данных этого приложения\n
-    ### * Качественная проверка, редактирование, и загрузка очень больших данных потребует времени. Подождите пожалуйста несколько минут пока крутиться "LOADING..."
 
-    """
-    start_t = time.time()
-    try:
-        processed = pd.read_excel(file.file)
-        iterated = [i for i in processed.itertuples(index=True,name='Item')]
-        _batched = itertools.batched(iterated, 300)
-        async with engine.begin() as conn:
-            for one_batch in _batched:
-                for one in one_batch:
-                    print(type(one.dt),"DT TYPE")
-                    ### STOPED HERE ----------------------------------
-                    _year = datetime.datetime.timetuple(one.dt).tm_year
-                    _month = datetime.datetime.timetuple(one.dt).tm_mon
-                    _day = datetime.datetime.timetuple(one.dt).tm_mday
-                    print(_year,_day,_month, "<<<")
-                    _stmt = f"INSERT INTO item(dt,article,kg) VALUES '({str(one.dt),one.article,one.kg})';"
-                    await conn.execute(text(_stmt))
-            await conn.commit()
-        end_t = time.time()
-        dur_t = (end_t - start_t)
-        return Response(status_code=200,content=f"OK: time duration: {dur_t}")
-        
-    except Exception:
-        raise HTTPException(status_code=404, detail="Wrong Excel File :")
-        
 import tempfile
 import os
 import pathlib
