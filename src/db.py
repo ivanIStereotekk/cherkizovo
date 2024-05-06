@@ -19,6 +19,4 @@ async def get_async_session() -> AsyncGenerator[AsyncSession, None]:
 
 
 
-#docker run --name pgdb1 -p 5432:5432 -e POSTGRES_USER=ewan -e POSTGRES_PASSWORD=myPassword1979 -e POSTGRES_DB=pgdb1 -d postgres:latest
 
-# docker run --name pgdb1 -e POSTGRES_PASSWORD=myPassword1979 -e POSTGRES_USER=ewan -p 5432:5432 -p POSTGRES_HOST=127.0.0.1 -d postgres:latest

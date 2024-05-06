@@ -1,0 +1,25 @@
+services:
+  excell_app:
+    command: uvicorn src.app:app --host 0.0.0.0 --port 80
+    build: .
+    ports:
+      - "80:80"
+    restart: always
+    volumes:
+      - ./cherkiz/app:/app
+    links:
+      - _postgres
+    depends_on:
+      - _postgres
+
+  _postgres:
+    build: ./database
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_DB=${POSTGRES_DB_NAME}
+    volumes:
+      - ./database:/app/database
+    ports:
+      - "5432:5432"
+    restart: always
