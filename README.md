@@ -30,7 +30,7 @@ Python можно использовать любой UI framework
 
 ### Создание хранимой процедуры:
 ```sql
-CREATE OR REPLACE PROCEDURE btwdt(start_dt integer, end_dt integer)
+CREATE OR REPLACE PROCEDURE btwdt(start_dt date, end_dt date)
 LANGUAGE SQL
 BEGIN ATOMIC
     SELECT article,count(id) FROM item WHERE dt BETWEEN start_dt AND end_dt GROUP BY article;
