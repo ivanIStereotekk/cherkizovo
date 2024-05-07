@@ -1,7 +1,7 @@
 from fastapi import Depends, FastAPI, UploadFile, HTTPException, Response
 from fastapi.responses import FileResponse
 from typing import Annotated
-from src.app import config
+from settings import config
 import pandas as pd
 from src.models import Base
 from src.db import engine
