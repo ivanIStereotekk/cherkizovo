@@ -1,7 +1,7 @@
 from fastapi import Depends, FastAPI, UploadFile, HTTPException, Response
 from fastapi.responses import FileResponse
 from typing import Annotated
-from app import config
+from src.app import config
 import pandas as pd
 from src.models import Base
 from src.db import engine
@@ -10,6 +10,9 @@ from datetime import date,timedelta
 import time
 import itertools
 import datetime
+import tempfile
+import os
+import pathlib
 
 
 
@@ -103,9 +106,7 @@ async def upload_file_route(file: UploadFile):
 
 # R E A D   E X C E L
 
-import tempfile
-import os
-import pathlib
+
 
 @app.get("/between-dates/{start_date}/{end_date}",tags=[" Получите Excel таблицу с отчетом за указанный период +[ по артикулуу ]"],response_class=FileResponse)
 async def between_dates_route(
