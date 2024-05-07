@@ -1,4 +1,4 @@
-## Задание для черкизово:
+## Задание для Черкизово:
 
 Задание
 1. Необходимо создать таблицу на сервере MSSQL с 3 столбцами
@@ -71,7 +71,7 @@ API_TITLE='eXCEL55 - Вэб сервис получения отчетов в ф
 CONTACT_EMAIL='ivan.stereotekk@gmail.com'
 CONTACT_NAME='Ivan Goncharov'
 CONTACT_URL='http://www.iskk.space/resume'
-CONTACT_PHONE='+79855203082'
+CONTACT_PHONE='+798*******'
 CONTACT_CV_FILE='https://hh.ru/resume/ede10e7eff0b33519e0039ed1f695844313832'
 SECRET=GghjcnjNjrty3455
 
@@ -80,7 +80,7 @@ SECRET=GghjcnjNjrty3455
 2 - Клонируйте репозиторий в вашу любимую папку - `git clone ivanIStereotekk/cherkizovo`
 
 
-3 - Перейдите в репозиторий при помощи `cd /Ваш/Путь/В/папку/cherkiz
+3 - Перейдите в репозиторий при помощи `cd /Ваш/Путь/В/папку/cherkiz`
 
 4 - Запустите сборку при помощи комманды ` docker compose up `
 
