@@ -1,8 +1,8 @@
 FROM python:3.12
 
 COPY ./requirements.txt /app/requirements.txt
-RUN pip install --upgrade pip
-RUN pip install --no-cache-dir  -r /app/requirements.txt
+RUN pip3 install --upgrade pip
+RUN pip3 install --no-cache-dir  -r /app/requirements.txt
 COPY . /app
 COPY ./entrypoint.sh /app/entrypoint.sh
 WORKDIR /app

@@ -8,11 +8,11 @@ services:
     volumes:
       - ./cherkiz/app:/app
     links:
-      - _postgres
+      - db_postgres
     depends_on:
-      - _postgres
+      - db_postgres
 
-  _postgres:
+  db_postgres:
     build: ./database
     environment:
       - POSTGRES_USER=${POSTGRES_USER}

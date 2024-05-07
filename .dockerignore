@@ -3,3 +3,4 @@ astro
 .env
 logs/
 tests
+README.md

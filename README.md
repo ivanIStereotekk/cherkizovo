@@ -18,11 +18,27 @@ Python можно использовать любой UI framework
 
 
 -----------------------------
+> [!IMPORTANT]
+> Использовал Postgres SQL по тех причинам.
+> [!NOTE]
+> Open API в качестве UI
 
-1 - Использовал Postgres SQL по тех причинам.
-2 - Open API в качестве UI
+-----------------------------
+### Создание хранимой процедуры:
+```sql
+CREATE OR REPLACE PROCEDURE btwdt(start_dt integer, end_dt integer)
+LANGUAGE SQL
+BEGIN ATOMIC
+    SELECT article,count(id) FROM item WHERE dt BETWEEN start_dt AND end_dt GROUP BY article;
+END;
+
+```
+### Вызов хранимой процедуры:
 
 
+```sql
+CALL btwdt('2021-02-04','2021-03-01')
+```
 
 
 
