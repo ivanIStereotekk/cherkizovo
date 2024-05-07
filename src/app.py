@@ -108,7 +108,7 @@ async def upload_file_route(file: UploadFile):
 
 
 
-@app.get("/between-dates/{start_date}/{end_date}",tags=[" Получите Excel таблицу с отчетом за указанный период +[ по артикулуу ]"],response_class=FileResponse)
+@app.get("/between-dates/{start_date}/{end_date}",tags=[" Получите Excel таблицу с отчетом за указанный период + [ по артикулуу ]"],response_class=FileResponse)
 async def between_dates_route(
     start_date: date ,
     end_date: date ,
