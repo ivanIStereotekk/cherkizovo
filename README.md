@@ -59,11 +59,14 @@ CALL btwdt('2021-02-04','2021-03-01')
 
 ```java
 
-POSTGRES_USER=postgres
+POSTGRES_USER=ewan
 POSTGRES_PASSWORD=myPassword1979
-POSTGRES_HOST=db_postgres # для сборки в Docker | Если на localhost 127.0.0.1
+POSTGRES_HOST_DOCKER=db_postgres
+POSTGRES_HOST_LOCAL=127.0.0.1
 POSTGRES_PORT=5432
 POSTGRES_DB_NAME=pgdb1
+# CHANGE WHILE BUILDING IN DOCKER
+POSTGRES_DOCKER_BUILD='False'
 
 
 API_DESCRIPTION='Черкизово API - Тестовая работа Ивана Гончарова'
