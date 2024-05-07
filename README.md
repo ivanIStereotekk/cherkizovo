@@ -20,6 +20,8 @@ Python можно использовать любой UI framework
 -----------------------------
 > [!IMPORTANT]
 > Использовал Postgres SQL по тех причинам.
+
+
 > [!NOTE]
 > Open API в качестве UI
 
