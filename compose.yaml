@@ -12,6 +12,8 @@ services:
 
   db_postgres:
     build: ./database
+    env_file:
+    - path: ./.env
     environment:
       - POSTGRES_USER=${POSTGRES_USER}
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
