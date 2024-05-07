@@ -71,7 +71,7 @@ API_TITLE='eXCEL55 - Вэб сервис получения отчетов в ф
 CONTACT_EMAIL='ivan.stereotekk@gmail.com'
 CONTACT_NAME='Ivan Goncharov'
 CONTACT_URL='http://www.iskk.space/resume'
-CONTACT_PHONE='+798*******'
+CONTACT_PHONE='+7987654321'
 CONTACT_CV_FILE='https://hh.ru/resume/ede10e7eff0b33519e0039ed1f695844313832'
 SECRET=GghjcnjNjrty3455
 
