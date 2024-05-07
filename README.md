@@ -1,8 +1,4 @@
-> [!NOTE]
-> В production не рекомендуется пушить `.env`, но в целях наглядности и удобства все тут.
-
-
-# Задание для черкизово:
+## Задание для черкизово:
 
 Задание
 1. Необходимо создать таблицу на сервере MSSQL с 3 столбцами
@@ -30,6 +26,8 @@ Python можно использовать любой UI framework
 > Open API в качестве UI
 
 -----------------------------
+
+
 ### Создание хранимой процедуры:
 ```sql
 CREATE OR REPLACE PROCEDURE btwdt(start_dt integer, end_dt integer)
@@ -45,6 +43,37 @@ END;
 ```sql
 CALL btwdt('2021-02-04','2021-03-01')
 ```
+Именно так выглядит Stored Procedure для Postgres SQL. 
+> [!NOTE]
+> Процесс создания хранимой процедуры на MS SQL немного отличается.
+
+-----------------------------
+### Сборка и запуск приложения `Docker` - `FastAPI` - `Postgres`:
+
+> [!NOTE] 
+> В production не рекомендуется пушить `.env`, но в целях наглядности и удобства все тут.
+
+
+```yaml
+
+POSTGRES_USER=ewan
+POSTGRES_PASSWORD=myPassword1979
+POSTGRES_HOST=127.0.0.1
+POSTGRES_PORT=5432
+POSTGRES_DB_NAME=pgdb1
+
+
+API_DESCRIPTION='Черкизово API - Тестовая работа Ивана Гончарова'
+API_TITLE='eXCEL55 - Вэб сервис получения отчетов в формате файлов Excel'
+CONTACT_EMAIL='ivan.stereotekk@gmail.com'
+CONTACT_NAME='Ivan Goncharov'
+CONTACT_URL='http://www.iskk.space/resume'
+CONTACT_PHONE='+79855203082'
+CONTACT_CV_FILE='https://hh.ru/resume/ede10e7eff0b33519e0039ed1f695844313832'
+SECRET=GghjcnjNjrty3455
+
+```
+
 
 
 
