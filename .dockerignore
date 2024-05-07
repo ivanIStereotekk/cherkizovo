@@ -3,3 +3,4 @@ astro
 logs/
 tests
 README.md
+__pycache__
