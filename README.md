@@ -43,7 +43,7 @@ END;
 ```sql
 CALL btwdt('2021-02-04','2021-03-01')
 ```
-Именно так выглядит Stored Procedure для Postgres SQL. 
+Так выглядит Stored Procedure для Postgres SQL. 
 > [!NOTE]
 > Процесс создания хранимой процедуры на MS SQL немного отличается.
 
@@ -61,7 +61,7 @@ CALL btwdt('2021-02-04','2021-03-01')
 
 POSTGRES_USER=ewan
 POSTGRES_PASSWORD=myPassword1979
-POSTGRES_HOST=db_postgres
+POSTGRES_HOST=db_postgres # для сборки в Docker | Если на localhost 127.0.0.1
 POSTGRES_PORT=5432
 POSTGRES_DB_NAME=pgdb1
 
