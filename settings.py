@@ -13,8 +13,9 @@ config = dotenv_values(f"{root_dir}/.env")
 if config['POSTGRES_DOCKER_BUILD'] == 'True':
     PG_HOST = config["POSTGRES_HOST_DOCKER"]
 elif config['POSTGRES_DOCKER_BUILD'] == 'False':
+    PG_DOCKER_RUN_DEV_MODE = config['DEV_DOKER_POSTGRES']
     PG_HOST = config["POSTGRES_HOST_LOCAL"]
-    os.system('docker run --name pgdb1 -p 5432:5432 -e POSTGRES_USER=ewan -e POSTGRES_PASSWORD=myPassword1979 -e POSTGRES_DB=pgdb1 -d postgres:latest')
+    os.system(PG_DOCKER_RUN_DEV_MODE) # Run docker container with postgres development usage
     time.sleep(10)
     os.system(f'echo "Service is run on {PG_HOST}"')
 
