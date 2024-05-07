@@ -59,7 +59,7 @@ CALL btwdt('2021-02-04','2021-03-01')
 
 ```java
 
-POSTGRES_USER=ewan
+POSTGRES_USER=postgres
 POSTGRES_PASSWORD=myPassword1979
 POSTGRES_HOST=db_postgres # для сборки в Docker | Если на localhost 127.0.0.1
 POSTGRES_PORT=5432
