@@ -1,4 +1,4 @@
-FROM python:3.9
+FROM python:3.11
 LABEL author="Ivan Goncharov" email="ivan.stereotekk@gmail.com"
 RUN mkdir myapp
 COPY ./requirements.txt /myapp/requirements.txt

@@ -1,6 +1,5 @@
 astro
 .git
-.env
 logs/
 tests
 README.md
