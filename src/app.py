@@ -44,30 +44,7 @@ async def common_parameters(contacts: dict = contact_dict):
 
 
 
-#   R O U T E S
-@app.get("/hello-world",tags=["Приветствие от автора!"])
-async def hello_world_route(cont_info: Annotated[dict, Depends(common_parameters)]):
-    """## Приветствую вас уважаемый коллега !\n
 
-Тестовая работа Ивана Гончарова:
-___________
-#### English Version of Resume : \n
-    http://www.iskk.space/resume \n
-
-------------
-#### Проекты и текущие работы можно посмотреть и запустить тут: \n
-    https://github.com/ivanIStereotekk
-
-#### Предпочтительная связь в телеграмм:     
-    @EwanPotterman\n
-
-#### Мои проекты в прод или просто Портфолио:\n
-    www.ascue.pro\n
-    www.iskk.space     [ MIDI + Computer Vision + Ableton Live ]\n
-    http://79.174.80.51:8080/ -- ТЕСТОВЫЙ САЙТ (для себя)\n
-"""
-
-    return f"{cont_info}"
 
 
 
