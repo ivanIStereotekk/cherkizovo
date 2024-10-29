@@ -71,7 +71,7 @@ POSTGRES_DOCKER_BUILD='True'
 
 API_DESCRIPTION='Черкизово API - Тестовая работа Ивана Гончарова'
 API_TITLE='eXCEL55 - Вэб сервис получения отчетов в формате файлов Excel'
-CONTACT_EMAIL='ivan.stereotekk@gmail.com'
+CONTACT_EMAIL='iva.atp3@gmail.com'
 CONTACT_NAME='Ivan Goncharov'
 CONTACT_URL='http://www.iskk.space/resume'
 CONTACT_PHONE='+7987654321'
@@ -80,7 +80,7 @@ SECRET=GghjcnjNjrty3455
 
 ```
 
-2 - Клонируйте репозиторий в вашу любимую папку - `git clone ivanIStereotekk/cherkizovo`
+2 - Клонируйте репозиторий в local папку - `git clone ivanIStereotekk/cherkizovo`
 
 
 3 - Перейдите в репозиторий при помощи `cd /Ваш/Путь/В/папку/cherkiz`
@@ -89,10 +89,10 @@ SECRET=GghjcnjNjrty3455
 
 5 - Немного подождите как все соберется и запустится, а затем перейдите на `0.0.0.0/docs`. 
 
-Наслаждайтесь !
+Работает !
 
 > [!NOTE]
-> На странице UI OpenAPI вы найдете инструкции как пользоваться приложением.
+> На странице Swagger UI OpenAPI вы найдете инструкции как пользоваться приложением.
 
 
 
