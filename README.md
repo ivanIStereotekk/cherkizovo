@@ -69,21 +69,21 @@ POSTGRES_DB_NAME=pgdb1
 POSTGRES_DOCKER_BUILD='True'
 
 
-API_DESCRIPTION='Черкизово API - Тестовая работа Ивана Гончарова'
+API_DESCRIPTION='Docs API - Тестовая работа Ивана Гончарова'
 API_TITLE='eXCEL55 - Вэб сервис получения отчетов в формате файлов Excel'
 CONTACT_EMAIL='iva.atp3@gmail.com'
 CONTACT_NAME='Ivan Goncharov'
 CONTACT_URL='http://www.iskk.space/resume'
-CONTACT_PHONE='+7987654321'
+CONTACT_PHONE='+798****'
 CONTACT_CV_FILE='https://hh.ru/resume/ede10e7eff0b33519e0039ed1f695844313832'
 SECRET=GghjcnjNjrty3455
 
 ```
 
-2 - Клонируйте репозиторий в local папку - `git clone ivanIStereotekk/cherkizovo`
+2 - Клонируйте репозиторий в local папку - `git clone ivanIStereotekk/documents`
 
 
-3 - Перейдите в репозиторий при помощи `cd /Ваш/Путь/В/папку/cherkiz`
+3 - Перейдите в репозиторий при помощи `cd /Ваш/Путь/В/папку/documents`
 
 4 - Запустите сборку при помощи комманды ` docker compose up --build`
 
